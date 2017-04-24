@@ -19,8 +19,7 @@ const createGroup = exports.createGroup = (() => {
   var _ref = _asyncToGenerator(function* (req, res) {
     var _req$body = req.body;
     const name = _req$body.name,
-          description = _req$body.description,
-          category = _req$body.category;
+          description = _req$body.description;
 
 
     if (!name) {

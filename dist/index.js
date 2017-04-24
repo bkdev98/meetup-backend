@@ -16,6 +16,8 @@ var _modules = require('./modules');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+/* eslint-disable no-console */
+
 const app = (0, _express2.default)();
 
 /**
@@ -27,14 +29,14 @@ const app = (0, _express2.default)();
  */
 (0, _middlewares2.default)(app);
 
-app.use('/api', [_modules.MeetupRoutes, _modules.GroupRoutes]);
+app.use('/api', [_modules.MeetupRoutes, _modules.GroupRoutes, _modules.UserRoutes]);
 
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, err => {
-    if (err) {
-        console.error(err);
-    } else {
-        console.log(`Server is up on port ${PORT}`);
-    }
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(`Server is up on port ${PORT}`);
+  }
 });
