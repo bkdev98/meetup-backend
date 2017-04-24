@@ -12,6 +12,7 @@
   "author": "Quoc Khanh",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.1",
     "body-parser": "^1.17.1",
     "eslint": "^3.19.0",
     "express": "^4.15.2",
