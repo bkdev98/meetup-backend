@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import express from 'express';
 import dbConfig from './config/db';
 import middlewaresConfig from './config/middlewares';
@@ -19,9 +21,9 @@ app.use('/api', [MeetupRoutes, GroupRoutes]);
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, err => {
-    if (err) {
-        console.error(err);
-    } else {
-        console.log(`Server is up on port ${PORT}`);
-    }
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(`Server is up on port ${PORT}`);
+  }
 });
